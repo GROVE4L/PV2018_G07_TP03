@@ -18,7 +18,6 @@ public class Categoria {
     public Categoria(String nombrecat) {
         this.nombrecat = nombrecat;
     }
-
     /**
      * @return the nombrecat
      */

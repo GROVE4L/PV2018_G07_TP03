@@ -33,4 +33,8 @@ public class GestorLibro {
         this.libro.add(libro);
     }
     
+    public int cantidadtitulos(Libro libro){
+        return this.libro.size();
+    }
+    
 }

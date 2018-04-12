@@ -11,27 +11,45 @@ package Punto12.Model;
  * @author Ignacio
  */
 public class Libro {
-    private String autor;
-
+    private String titulo;
+    private Categoria catlibro;
+    
     public Libro() {
     }
 
-    public Libro(String autor) {
-        this.autor = autor;
+    public Libro(String titulo, Categoria catlibro) {
+        this.titulo = titulo;
+        this.catlibro = catlibro;
     }
     
     /**
-     * @return the autor
+     * @return the titulo
      */
-    public String getAutor() {
-        return autor;
+    public String getTitulo() {
+        return titulo;
     }
 
     /**
-     * @param autor the autor to set
+     * @param titulo the titulo to set
      */
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
+
+    /**
+     * @return the catlibro
+     */
+    public Categoria getCatlibro() {
+        return catlibro;
+    }
+
+    /**
+     * @param catlibro the catlibro to set
+     */
+    public void setCatlibro(Categoria catlibro) {
+        this.catlibro = catlibro;
+    }
+
+    
     
 }

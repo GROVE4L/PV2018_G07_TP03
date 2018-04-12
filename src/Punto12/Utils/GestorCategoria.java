@@ -34,4 +34,13 @@ public class GestorCategoria {
         this.categoria.add(categoria);    
     }
     
+    public int tamañoCategoria(){
+        return this.categoria.size();
+    }
+    
+    public boolean existecategoria(String categoria){
+        return this.categoria.contains(categoria);
+    }
+        
+    
 }
