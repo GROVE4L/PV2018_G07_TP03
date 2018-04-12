@@ -33,8 +33,12 @@ public class GestorLibro {
         this.libro.add(libro);
     }
     
-    public int cantidadtitulos(Libro libro){
-        return this.libro.size();
+    public boolean cantidadtitulos(String categoria){
+        return this.libro.contains(categoria);
+    }
+    
+    public void devolvercat(Libro libro){
+        libro.getCatlibro();
     }
     
 }

@@ -10,26 +10,23 @@ package Punto12.Model;
  * @author Ignacio
  */
 public class Categoria {
-    private String nombrecat;
+    private String nombre;
 
-    public Categoria() {
-    }
-
-    public Categoria(String nombrecat) {
-        this.nombrecat = nombrecat;
-    }
-    /**
-     * @return the nombrecat
-     */
-    public String getNombrecat() {
-        return nombrecat;
-    }
-
-    /**
-     * @param nombrecat the nombrecat to set
-     */
-    public void setNombrecat(String nombrecat) {
-        this.nombrecat = nombrecat;
+    public Categoria(String nombre) {
+        this.nombre = nombre;
     }
     
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }

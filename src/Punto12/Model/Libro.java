@@ -49,7 +49,5 @@ public class Libro {
     public void setCatlibro(Categoria catlibro) {
         this.catlibro = catlibro;
     }
-
-    
     
 }
