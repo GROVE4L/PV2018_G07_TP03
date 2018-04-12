@@ -9,6 +9,8 @@ import Punto12.Model.Categoria;
 import Punto12.Model.Libro;
 import Punto12.Utils.GestorCategoria;
 import Punto12.Utils.GestorLibro;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -30,7 +32,7 @@ public class Cuerpo {
         gestorcat.agregarCategoria(csficcion);
 
         Libro autor1 = new Libro("Soledad",comedia);
-        Libro autor2 = new Libro("Wolf",csficcion);
+        Libro autor2 = new Libro("Wolf",comedia);
         Libro autor3 = new Libro ("Rojas",drama);
         
         GestorLibro gestorlib = new GestorLibro();
@@ -53,15 +55,17 @@ public class Cuerpo {
         */
                 System.out.println("Podremos realizar una busqueda por Categoria y Titulo o por Titulo unicamente\nPresione(a) para la primera opcion\nPresione(b) para la segunda opcion");
                 Scanner sca = new Scanner(System.in);
+                System.out.println("Ingrese una opcion:");
                 char opc = sca.next().charAt(0);
                 switch (opc){
-                    case 'a':                    
-                    
+                    case 'a':
+                        if(gestorcat.existecategoria(comedia)){
+                            for(Libro libro: gestorlib.getLibro()){
+                                System.out.println(libro.getCatlibro()==comedia);
+                            }
+                        }
                     case 'b': ;
-                    default: System.out.println("Error de Opcion");
-                    }
-            }
-        }
+                }
     }
 }
 
