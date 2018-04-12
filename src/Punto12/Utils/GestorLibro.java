@@ -8,6 +8,7 @@ package Punto12.Utils;
 import Punto12.Model.Categoria;
 import java.util.ArrayList;
 import Punto12.Model.Libro;
+import java.util.Iterator;
 
 /**
  *
@@ -34,15 +35,14 @@ public class GestorLibro {
         this.libro.add(libro);
     }
     
-    public boolean cantidadtitulos(String categoria){
+    public boolean cantidadTitulos(String categoria){
         return this.libro.contains(categoria);
     }
     
-    public void devolvercat(Libro libro){
+    public void devolverCat(Libro libro){
         libro.getCatlibro();
     }
-    public boolean existetitulo(Libro titulo){
+    public boolean existeTitulo(Libro titulo){
         return this.libro.contains(titulo);
     }
-    
 }

@@ -38,9 +38,8 @@ public class GestorCategoria {
         return this.categoria.size();
     }
     
-    public boolean existecategoria(Categoria categoria){
+    public boolean existeCategoria(Categoria categoria){
         return this.categoria.contains(categoria);
     }
         
-    
 }

@@ -12,12 +12,12 @@ package Punto12.Model;
  */
 public class Libro {
     private String titulo;
-    private Categoria catlibro;
+    private String catlibro;
     
     public Libro() {
     }
 
-    public Libro(String titulo, Categoria catlibro) {
+    public Libro(String titulo, String catlibro) {
         this.titulo = titulo;
         this.catlibro = catlibro;
     }
@@ -39,15 +39,16 @@ public class Libro {
     /**
      * @return the catlibro
      */
-    public Categoria getCatlibro() {
+    public String getCatlibro() {
         return catlibro;
     }
 
     /**
      * @param catlibro the catlibro to set
      */
-    public void setCatlibro(Categoria catlibro) {
+    public void setCatlibro(String catlibro) {
         this.catlibro = catlibro;
     }
+ 
     
 }

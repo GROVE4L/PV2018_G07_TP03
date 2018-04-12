@@ -12,6 +12,7 @@ import Punto12.Utils.GestorLibro;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Iterator;
 import java.util.Scanner;
+import javafx.scene.effect.Glow;
 
 /**
  *
@@ -31,9 +32,9 @@ public class Cuerpo {
         gestorcat.agregarCategoria(terror);
         gestorcat.agregarCategoria(csficcion);
 
-        Libro titulo1 = new Libro("Soledad",comedia);
-        Libro titulo2 = new Libro("Wolf",comedia);
-        Libro titulo3 = new Libro ("Rojas",drama);
+        Libro titulo1 = new Libro("100 años de Soledad","Drama");
+        Libro titulo2 = new Libro("Los tres chanchitos","Infantil");
+        Libro titulo3 = new Libro ("Rojas","Suspenso");
         
         GestorLibro gestorlib = new GestorLibro();
         gestorlib.agregarLibro(titulo1);
@@ -45,26 +46,24 @@ public class Cuerpo {
         System.out.println("Ingrese una opcion:");
         char opc = sca.next().charAt(0);
         switch (opc){
-            case 'a':
+            case 'a':case 'A':
+                /*Scanner scambos = new Scanner(System.in);
+                System.out.println("Ingrese la Categoria que busca: ");
+                String cat = scambos.nextLine();*/
                 for(Libro libro: gestorlib.getLibro()){
-                    if(libro.getCatlibro()==comedia){
-                        System.out.println("El libro -" + libro.getTitulo() + "- existe en la categoria");
+                    if(libro.getCatlibro()=="Drama"){
+                        System.out.println("El libro -" + libro.getTitulo() + "- es de " + libro.getCatlibro());
                     }
-                    else
-                    {
-                        System.out.println("La categoria o el titulo no existe");
+                };
+                break;
+            case 'b':case 'B':
+                for(Libro libro: gestorlib.getLibro()){
+                    if(libro.getTitulo()=="Rojas"){
+                        System.out.println("El titulo del libro -" + libro.getTitulo() + "- existe en la categoria " + libro.getCatlibro());
                     }
                 }
-            case 'b':
-                for(Libro libro: gestorlib.getLibro()){
-                    if(libro.getTitulo()=="Wolf"){
-                        System.out.println("El titulo del libro -" + libro.getTitulo() + "- existe");
-                    }
-                    else
-                    {
-                        System.out.println("El titulo no existe");
-                    }
-                }
+                ;
+                break;
         }
     }
 }
