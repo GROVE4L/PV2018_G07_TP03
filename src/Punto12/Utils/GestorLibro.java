@@ -5,6 +5,7 @@ campos o solo por autor.
  */
 package Punto12.Utils;
 
+import Punto12.Model.Categoria;
 import java.util.ArrayList;
 import Punto12.Model.Libro;
 
@@ -39,6 +40,9 @@ public class GestorLibro {
     
     public void devolvercat(Libro libro){
         libro.getCatlibro();
+    }
+    public boolean existetitulo(Libro titulo){
+        return this.libro.contains(titulo);
     }
     
 }

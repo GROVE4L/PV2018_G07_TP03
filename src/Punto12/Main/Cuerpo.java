@@ -31,54 +31,40 @@ public class Cuerpo {
         gestorcat.agregarCategoria(terror);
         gestorcat.agregarCategoria(csficcion);
 
-        Libro autor1 = new Libro("Soledad",comedia);
-        Libro autor2 = new Libro("Wolf",comedia);
-        Libro autor3 = new Libro ("Rojas",drama);
+        Libro titulo1 = new Libro("Soledad",comedia);
+        Libro titulo2 = new Libro("Wolf",comedia);
+        Libro titulo3 = new Libro ("Rojas",drama);
         
         GestorLibro gestorlib = new GestorLibro();
-        gestorlib.agregarLibro(autor1);
-        gestorlib.agregarLibro(autor2);
-        gestorlib.agregarLibro(autor3);
+        gestorlib.agregarLibro(titulo1);
+        gestorlib.agregarLibro(titulo2);
+        gestorlib.agregarLibro(titulo3);
         
-        /*char opc='v';
-        while ( opc != 'f' && opc != 'F'){
-            System.out.println("Desea realizar una busqueda? (V/F): ");
-            
-            Scanner sca = new Scanner(System.in);
-            opc = sca.next().charAt(0);
-            if (opc == 'f' && opc =='F'){
-                System.out.println("No se realizo ninguna Busqueda");
-                break;
-            }
-            else
-            {
-        */
-                System.out.println("Podremos realizar una busqueda por Categoria y Titulo o por Titulo unicamente\nPresione(a) para la primera opcion\nPresione(b) para la segunda opcion");
-                Scanner sca = new Scanner(System.in);
-                System.out.println("Ingrese una opcion:");
-                char opc = sca.next().charAt(0);
-                switch (opc){
-                    case 'a':
-                        if(gestorcat.existecategoria(comedia)){
-                            for(Libro libro: gestorlib.getLibro()){
-                                System.out.println(libro.getCatlibro()==comedia);
-                            }
-                        }
-                    case 'b': ;
+        System.out.println("Podremos realizar una busqueda por Categoria y Titulo o por Titulo unicamente\nPresione(a) para la primera opcion\nPresione(b) para la segunda opcion");
+        Scanner sca = new Scanner(System.in);
+        System.out.println("Ingrese una opcion:");
+        char opc = sca.next().charAt(0);
+        switch (opc){
+            case 'a':
+                for(Libro libro: gestorlib.getLibro()){
+                    if(libro.getCatlibro()==comedia){
+                        System.out.println("El libro -" + libro.getTitulo() + "- existe en la categoria");
+                    }
+                    else
+                    {
+                        System.out.println("La categoria o el titulo no existe");
+                    }
                 }
+            case 'b':
+                for(Libro libro: gestorlib.getLibro()){
+                    if(libro.getTitulo()=="Wolf"){
+                        System.out.println("El titulo del libro -" + libro.getTitulo() + "- existe");
+                    }
+                    else
+                    {
+                        System.out.println("El titulo no existe");
+                    }
+                }
+        }
     }
 }
-
-                    /*System.out.println("Las categorias son: " + gestorcat.tamañoCategoria());                
-                    System.out.println("Ingrese la Categoria que desea buscar");
-                    
-                    Scanner scacat = new Scanner(System.in); 
-                    String cat = scacat.nextLine();
-                    
-                    for(Categoria categoria: gestorcat.getCategoria()){
-                    System.out.println("La Categoria " + cat + " : " + gestorcat.existecategoria(cat));
-                    }
-                    System.out.println("La Titulos Totales de la categoria son: " + gestorlib.getLibro());
-                    System.out.println("Ingrese el Titulo que desea buscar");
-                    String tit = sca.nextLine();;
-*/
