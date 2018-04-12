@@ -59,10 +59,7 @@ public class Cuerpo {
             System.out.println("El tamaño de la lista es: " + gestor.devolverTamano(man) + "\n");
         
             for (Manual manual: gestor.getManual()){
-                System.out.println("ISBN: " + manual.getIsbn() 
-                        + " - Titulo: " + manual.getTitulo() 
-                        + " - Autor: " + manual.getAutor() 
-                        + " - Precio: " + manual.getPrecio()+ "\n");
+                gestor.mostrarManual(manual);
             }
         }
     }

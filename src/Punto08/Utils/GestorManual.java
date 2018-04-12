@@ -34,6 +34,13 @@ public class GestorManual {
         this.manual.add(manual);
     }
     
+    public void mostrarManual(Manual manual){
+        System.out.println("ISBN: " + manual.getIsbn() 
+                        + " - Titulo: " + manual.getTitulo() 
+                        + " - Autor: " + manual.getAutor() 
+                        + " - Precio: " + manual.getPrecio()+ "\n");        
+    }
+    
     public int devolverTamano(Manual manual){
         return this.manual.size();
     }
