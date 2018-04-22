@@ -7,8 +7,6 @@ package Punto08.Main;
 
 import Punto08.Model.Manual;
 import Punto08.Utils.GestorManual;
-import Punto12.Model.Libro;
-import Punto12.Utils.GestorCategoria;
 import java.util.Scanner;
 
 /**
